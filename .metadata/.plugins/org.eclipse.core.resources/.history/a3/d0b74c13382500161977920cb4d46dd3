@@ -1,0 +1,21 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class Produto_test {
+
+	@Before
+	public void beforeTests(){
+		
+	}
+	
+	@Test
+	public void testHash() {
+		Produto p = new Produto("Carrinho",1000, 50.0);
+		assertEquals(p.hashCode(), p.codigo);
+	}
+	
+	
+
+}

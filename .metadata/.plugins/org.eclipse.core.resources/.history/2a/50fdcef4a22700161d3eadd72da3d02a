@@ -1,0 +1,92 @@
+import java.util.Date;
+
+public class Pessoa {
+
+	private Date dataDeNascimento;
+	private String signos[];
+	
+	public Date getDataDeNascimento(){
+		return dataDeNascimento;
+		
+	}
+
+	public void setDataDeNascimento(Date data){
+		dataDeNascimento = data;
+	}
+	
+	public int getIdade(){
+		
+		return 1;
+	}
+	public String getSigno(){
+		signos = new String[] {	"Capricornio", "Aquario", "Peixes", "Áries", "Touro", "Gemeos", 
+								"Cancer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricornio"};
+		int dias[] = { 20, 19, 20, 20, 20, 20, 21, 22, 22, 22, 21, 21};
+		
+		switch(dataDeNascimento.getMonth()){
+		case 0:
+			if(dataDeNascimento.getDay() < 20)
+				return "Capricornio";
+			return "Aquário";
+		
+		case 1:
+			if(dataDeNascimento.getDay() < 19)
+				return "Capricornio";
+			return "Aquário";
+		
+		case 2:
+			if(dataDeNascimento.getDay() < 20)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 3:
+			if(dataDeNascimento.getDay() < 20)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 4:
+			if(dataDeNascimento.getDay() < 20)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 5:
+			if(dataDeNascimento.getDay() < 20)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 6:
+			if(dataDeNascimento.getDay() < 21)
+				return "Capricornio";
+			return "Aquário";
+		
+		case 7:
+			if(dataDeNascimento.getDay() < 22)
+				return "Capricornio";
+			return "Aquário";
+		
+		case 8:
+			if(dataDeNascimento.getDay() < 22)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 9:
+			if(dataDeNascimento.getDay() < 22)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 10:
+			if(dataDeNascimento.getDay() < 21)
+				return "Capricornio";
+			return "Aquário";
+			
+		case 11:
+			if(dataDeNascimento.getDay() < 21)
+				return "Capricornio";
+			return "Aquário";
+			
+		}
+		
+		return signos[index];
+	}
+}
+

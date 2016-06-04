@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CarrinhoDeCompras_teste {
+
+	CarrinhoDeCompras cc;
+	Produto p1, p2;
+	ProdutoComTamanho pt1, pt2;
+	
+	@Before 
+	public void antes(){
+		cc = new CarrinhoDeCompras();
+		p1 = new Produto("Bola1", 1, 10.0);
+		p2 = new Produto("Bola2", 2, 11.0);
+		pt1 = new ProdutoComTamanho("Bola", 1, 10.0, 1);
+		pt2 = new ProdutoComTamanho("Bola", 1, 10.0, 2);
+	}
+	
+	@Test
+	public void testAdicionaProduto() {
+		cc.adicionaProduto(p1, 5);
+		int count = cc.getListaProdutos().get(p1);
+		assertEquals(count, 5);
+	}
+
+}

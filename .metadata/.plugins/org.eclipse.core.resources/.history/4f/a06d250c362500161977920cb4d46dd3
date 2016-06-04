@@ -1,0 +1,22 @@
+
+public class Produto {
+	public String nome;
+	int codigo;
+	private double preco;
+	
+	public boolean equals(Object obj){
+		Produto prod = (Produto) obj;
+		if (this.codigo == prod.codigo)
+			return true;
+		
+		return false;
+	}
+	
+	public int hashCode(){
+		return codigo;
+	}
+	
+	double getPreco(){
+		return this.preco;
+	}
+}

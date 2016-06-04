@@ -1,0 +1,16 @@
+
+public class Pessoa {
+
+	private Date dataDeNascimento;
+	
+	public Date getDataDeNascimento(){
+		
+	}
+
+	public void setDataDeNascimento(Date data){
+		
+	}
+	
+	
+}
+

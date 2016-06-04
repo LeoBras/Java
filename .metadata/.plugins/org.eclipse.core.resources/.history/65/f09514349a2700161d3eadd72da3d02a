@@ -1,0 +1,16 @@
+
+public class Autoridade {
+	private String nome;
+	private String sobrenome;
+	public FormatadorNome fn;
+	
+	public Autoridade(String nome, String sobrenome){
+		this.nome = nome;
+		this.sobrenome = sobrenome.
+	}
+	
+	public String getTratamento(){
+		return fn.formatarNome(this.nome, this.sobrenome);
+	}
+}
+ 

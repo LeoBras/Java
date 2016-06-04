@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestePizza {
+
+	@Before
+	public void beforeTests(){
+		Pizza.resetListaIngredientes();
+	}
+	
+	@Test
+	public void test() {
+		Pizza pz = new Pizza();
+		assertEquals(15, pz.getPreco());
+		pz.adicionaIngrediente("Bacon");
+		pz.adicionaIngrediente("Mussarela");
+		pz.adicionaIngrediente("Bacon");
+		assertEquals(20, pz.getPreco());
+		pz.adicionaIngrediente("Calabresa");
+		pz.adicionaIngrediente("Bacon");
+		assertEquals(20, pz.getPreco());
+		pz.adicionaIngrediente("Peperoni");
+		assertEquals(23, pz.getPreco());
+	}
+}

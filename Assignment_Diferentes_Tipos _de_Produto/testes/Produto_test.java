@@ -1,0 +1,30 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class Produto_test {
+	
+	private Produto p1, p2, p3;
+	
+	@Before
+	public void prepareForTest(){
+		this.p1 = new Produto("Carrinho",1000, 50.0);
+		this.p2 = new Produto("Carrinho2",1000, 52.0);
+		this.p3 = new Produto("Carrinho3",1001, 50.0);
+	}
+	
+	@Test
+	public void testHash() {
+		assertEquals(p1.hashCode(), p1.codigo);
+		assertEquals(p1.hashCode(),p2.hashCode());
+		assertNotEquals(p1.hashCode(),p3.hashCode());
+	}
+	
+	
+	@Test
+	public void testEquals() {		
+		assertTrue(p1.equals(p2));
+		assertFalse(p1.equals(p3));
+	}
+}

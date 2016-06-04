@@ -1,0 +1,32 @@
+import java.util.Date;
+
+public class Pessoa {
+
+	private Date dataDeNascimento;
+	private String signos[];
+	
+	public Date getDataDeNascimento(){
+		return dataDeNascimento;
+		
+	}
+
+	public void setDataDeNascimento(Date data){
+		dataDeNascimento = data;
+	}
+	
+	public int getIdade(){
+		
+		return 1;
+	}
+	public String getSigno(){
+		signos = new String[] {	"Capricornio", "Aquario", "Peixes", "Áries", "Touro", "Gemeos", 
+								"Cancer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricornio"};
+		
+		int index = dataDeNascimento.getMonth();
+		
+		
+		
+		return "";
+	}
+}
+

@@ -1,0 +1,25 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Autoridade_test {
+	
+	@Test
+	public void testInformal() {
+		Informal t = new Informal();
+		Autoridade a = new Autoridade("José", "Silva", t);
+		assertEquals("José",a.getTratamento());
+		Autoridade b = new Autoridade("Maria", "Antonieta", t);
+		assertEquals("Maria",a.getTratamento());
+	}
+	
+	@Test
+	public void testRespeitoso() {
+		Respeitoso t = new Respeitoso(true);
+		Autoridade a = new Autoridade("José", "Silva", t);
+		assertEquals("Sr. Silva",a.getTratamento());
+		
+		Respeitoso t1 = new Respeitoso(false);
+		Autoridade b = new Autoridade("Maria", "Antonieta", t1);
+		assertEquals("Sra. Antonieta",a.getTratamento());
+	}

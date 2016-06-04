@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import java.util.Date;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+@SuppressWarnings("deprecation")
+public class TestePessoa {
+
+	private Date now;
+	private Relogio rel;
+	
+	@BeforeClass
+	public void prepara(){
+		now = new Date(2016, 06, 01,);
+		rel = new Relogio();
+		rel.setForceValue(force);
+		
+	}
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

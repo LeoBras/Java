@@ -1,0 +1,50 @@
+import java.util.Date;
+
+@SuppressWarnings("deprecation")
+public class Pessoa {
+
+	private Date dataDeNascimento;
+	private String signos[];
+	
+	public Date getDataDeNascimento(){
+		return dataDeNascimento;
+		
+	}
+	
+	public Pessoa(Date data){
+		setDataDeNascimento(data);
+	}
+
+	public void setDataDeNascimento(Date data){
+		dataDeNascimento = data;
+	}
+	
+	public int getIdade(Relogio rel){
+		int idade;	
+		Date now = new Date(rel.agora());
+		Date nasc = dataDeNascimento;
+	
+		idade = now.getYear() - nasc.getYear();
+		
+		nasc.setYear(now.getYear());
+		
+		if(now.before(nasc))
+			idade--;
+		
+		return idade;
+	}
+	
+	public String getSigno(){
+		signos = new String[] { "Capricornio", "Aquario", "Peixes", "Áries", "Touro", "Gemeos", 
+								"Cancer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricornio"};
+		int dias[] = { 20, 19, 20, 20, 20, 20, 21, 22, 22, 22, 21, 21};
+		
+		int index = dataDeNascimento.getMonth();
+
+		if(dataDeNascimento.getDate() > dias[index])
+			index++;
+		
+		return signos[index];
+	}
+}
+

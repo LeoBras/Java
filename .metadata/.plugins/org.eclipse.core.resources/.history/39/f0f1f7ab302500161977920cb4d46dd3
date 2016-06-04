@@ -1,0 +1,18 @@
+
+public class ProdutoComTamanho extends Produto {
+	private double tamanho;
+	
+	public boolean equals(Object obj){
+		Produto prod = (ProdutoComTamanho) obj;
+		if (this.codigo == prod.codigo &&
+			this.tamanho == prod.tamanho)
+			return true;
+		
+		return false;
+	}
+	
+	public int hashCode(){
+		return codigo;
+	}	
+	
+}

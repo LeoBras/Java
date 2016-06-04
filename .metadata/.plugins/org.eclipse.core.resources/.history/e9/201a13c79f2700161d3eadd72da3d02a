@@ -1,0 +1,27 @@
+import java.sql.Date;
+
+public class Pessoa {
+
+	private Date dataDeNascimento;
+	
+	public Date getDataDeNascimento(){
+		return dataDeNascimento;
+		
+	}
+
+	public void setDataDeNascimento(Date data){
+		dataDeNascimento = data;
+	}
+	
+	public int getIdade(){
+		
+		return 1;
+	}
+	public String getSigno(){
+		
+		return "";
+	}
+	
+	
+}
+

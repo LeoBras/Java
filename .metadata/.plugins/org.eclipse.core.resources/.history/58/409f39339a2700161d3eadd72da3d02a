@@ -1,0 +1,15 @@
+
+public class Autoridade {
+	private String nome;
+	private String sobrenome;
+	private FormatadorNome fn;
+	
+	public Autoridade(){
+		
+	}
+	
+	public String getTratamento(){
+		return fn.formatarNome(this.nome, this.sobrenome);
+	}
+}
+ 

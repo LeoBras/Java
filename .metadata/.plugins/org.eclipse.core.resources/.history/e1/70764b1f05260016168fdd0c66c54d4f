@@ -1,0 +1,20 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CompraParcelada_teste {
+
+	@Test
+//	public void testParcelas(){
+//		testXParcelas(1, 1000);
+//		testXParcelas(2, 500 + 510);
+//		testXParcelas(5, 1040.80);
+//		testXParcelas(10, 1094.97);
+//	}
+	
+	public void test1Parcelas() {
+		CompraParcelada cp = new CompraParcelada(1000, 1, 2);	
+		assertEquals(1000, cp.total(), 0.1);
+	}
+
+}

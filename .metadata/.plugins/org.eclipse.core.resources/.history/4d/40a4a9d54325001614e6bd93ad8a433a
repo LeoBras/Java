@@ -1,0 +1,66 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CarrinhoDeCompras_teste {
+
+	CarrinhoDeCompras cc;
+	Produto p1, p2;
+	ProdutoComTamanho pt1, pt2;
+	
+	@Before 
+	public void antes(){
+		cc = new CarrinhoDeCompras();
+		p1 = new Produto("Bola1", 1, 10.0);
+		p2 = new Produto("Bola2", 2, 11.0);
+		pt1 = new ProdutoComTamanho("Bola", 1, 10.0, 1);
+		pt2 = new ProdutoComTamanho("Bola", 1, 10.0, 2);
+	}
+	
+	@Test
+	public void testAdicionaProduto() {
+		//Adiciona um produto
+		cc.adicionaProduto(p1, 5);
+		int count = cc.getListaProdutos().get(p1);
+		assertEquals(count, 5);
+		
+		//Adiciona outro produto
+		cc.adicionaProduto(p2, 3);
+		count = cc.getListaProdutos().get(p2);
+		assertEquals(count, 3);
+		count = cc.getListaProdutos().get(p1); // O primeiro ainda está la?
+		assertEquals(count, 5);
+		
+		// Adiciona o mesmo produto denovo.
+		cc.adicionaProduto(p1, 8);
+		count = cc.getListaProdutos().get(p1);
+		assertEquals(count, 5 + 8);
+		count = cc.getListaProdutos().get(p2); // O outro produto ainda está la?
+		assertEquals(count, 3);
+	}
+	
+	@Test
+	public void testRemoveProduto() {
+		int count;
+		//Adiciona um produto
+		cc.adicionaProduto(p1, 15);
+		cc.adicionaProduto(p2, 3);
+		
+		cc.removeProduto(p1, 10);
+		count = cc.getListaProdutos().get(p1);
+		assertEquals(count, 15 - 10);
+		
+		cc.removeProduto(p2, 2);
+		count = cc.getListaProdutos().get(p2);
+		assertEquals(count, 3 - 2);
+		
+		cc.removeProduto(p1, 7);
+		assertFalse(cc.getListaProdutos().containsKey(p1));
+		assertTrue(cc.getListaProdutos().containsKey(p2));
+		
+		cc.removeProduto(p2, 1);
+		assertFalse(cc.getListaProdutos().containsKey(p2));
+	}
+	
+
+}
