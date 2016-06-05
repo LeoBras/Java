@@ -1,0 +1,14 @@
+
+public class TestesSplit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String teste = "Nome->Teste";
+		String splited[] = teste.split("->");
+		
+		System.out.println(splited[0]);
+		
+	}
+
+}

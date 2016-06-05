@@ -15,4 +15,5 @@
 <fullyQualifiedTypeName name="javax.sql.rowset.spi.TransactionalWriter"/>
 <fullyQualifiedTypeName name="LeituraArquivoException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

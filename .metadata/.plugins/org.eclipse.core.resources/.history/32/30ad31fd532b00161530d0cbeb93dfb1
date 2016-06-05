@@ -1,0 +1,17 @@
+import java.util.HashMap;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			HashMap<String,	String> test = ProcessadorArquivo.processar("Formato_Correto.txt");
+		} catch (LeituraArquivoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

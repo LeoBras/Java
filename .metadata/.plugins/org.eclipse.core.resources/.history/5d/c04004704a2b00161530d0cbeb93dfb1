@@ -1,0 +1,20 @@
+import static org.junit.Assert.*;
+
+public class Test {
+
+	@org.junit.Test
+	public void test_ArquivoNaoExiste(){
+	
+		try {
+			ProcessadorArquivo.processar("NaoExiste.txt");
+			fail("Falhou em detectar arquivo nao existente");
+		} catch (LeituraArquivoException e) {
+			if(!(e.getMessage().startsWith("Erro ao abrir o arquivo")))
+				fail("Mensagem incoreta");
+			e.printStackTrace();
+		}
+
+				
+	}
+
+}
