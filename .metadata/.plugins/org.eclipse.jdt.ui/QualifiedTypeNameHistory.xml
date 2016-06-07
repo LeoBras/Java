@@ -9,11 +9,22 @@
 <fullyQualifiedTypeName name="Relogio"/>
 <fullyQualifiedTypeName name="Pessoa"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="javax.sql.rowset.spi.TransactionalWriter"/>
 <fullyQualifiedTypeName name="LeituraArquivoException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
+<fullyQualifiedTypeName name="ProcessadorArquivo"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.net.NetworkInterface"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="java.util.stream.Stream"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="FabricaMecanicaDoJogo"/>
+<fullyQualifiedTypeName name="BancoDePalavras"/>
+<fullyQualifiedTypeName name="FabricaEmbaralhadores"/>
+<fullyQualifiedTypeName name="Embaralhador"/>
 </qualifiedTypeNameHistroy>
